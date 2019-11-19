@@ -116,7 +116,7 @@ create table if not exists Sell(
     PricePerUnit decimal(9,2),
     foreign key (A_ID) references Assets(A_ID) on delete cascade,
     foreign key (Supplier_ID) references Supplier(Supplier_ID) on delete cascade,
-    primary key (Sale_ID)
+    primary key (A_ID, Supplier_ID)
 );
 
 
@@ -141,5 +141,5 @@ create table if not exists TransactionInfo(
     foreign key (SSN) references Employee(SSN) on delete cascade,
     foreign key (Customer_ID) references Customer(Customer_ID) on delete cascade,
     foreign key (Service_ID) references Service(Service_ID) on delete cascade,
-    primary key (Tx_ID)
+    primary key (SSN, Customer_ID, Service_ID)
 );
