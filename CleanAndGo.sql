@@ -89,12 +89,13 @@ create table if not exists CleanSupplies(
 );
 
 create table if not exists Building(
+	Building_ID,
 	A_ID int,
     Rent decimal(9,2),
     Utilities decimal(9,2),
     DateofSign date,
     foreign key (A_ID) references Assets(A_ID),
-    primary key(A_ID)
+    primary key(Building_ID)
 );
 
 create table if not exists MSchedule(
