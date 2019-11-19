@@ -25,7 +25,7 @@ create table if not exists Supplier(
     primary key (Supplier_ID)
 );
 
-create table if not exists Assets(
+create table if not exists Asset(
 	A_ID int auto_increment,
 
 	primary key(A_ID)
